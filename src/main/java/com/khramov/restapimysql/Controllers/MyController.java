@@ -23,9 +23,10 @@ public class MyController {
         return salesService.getOneSale(a);
     }
 
-    @PostMapping("/sales/{sale}")
-    public void addNewSale(@ModelAttribute Sales sales){
+    @PostMapping("/sales")
+    public Sales addNewSale(@RequestBody Sales sales){
        salesService.addNewSale(sales);
+       return sales;
     }
 
     @DeleteMapping("/sale/{a}")
