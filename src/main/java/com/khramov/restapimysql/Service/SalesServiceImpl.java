@@ -39,4 +39,10 @@ public class SalesServiceImpl implements SalesService{
     public void deleteSale(int a) {
         salesRepositories.deleteById(a);
     }
+
+    @Override
+    public Sales updateSale(Sales sales) {
+        salesRepositories.save(sales);
+        return sales;
+    }
 }

@@ -34,5 +34,11 @@ public class MyController {
         salesService.deleteSale(a);
     }
 
+    @PutMapping("/sales")
+    public Sales updateSale(@RequestBody Sales sales){
+        salesService.updateSale(sales);
+        return sales;
+    }
+
 
 }

@@ -15,6 +15,6 @@ public interface SalesService {
 
     public void deleteSale (int a);
 
-//    public void updateSale (int a);
+    public Sales updateSale (Sales sales);
 
 }
